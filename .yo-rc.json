@@ -25,5 +25,55 @@
         }
       }
     }
+  },
+  "weather-app": {
+    "configuration": {
+      "config": {
+        "configName": "config",
+        "topScope": [
+          "const path = require('path');",
+          "const webpack = require('webpack');",
+          "\n"
+        ],
+        "webpackOptions": {
+          "mode": "'development'",
+          "plugins": [
+            "new webpack.ProgressPlugin()"
+          ],
+          "module": {
+            "rules": [
+              {
+                "test": "/\\.(js|jsx)$/",
+                "include": [
+                  "path.resolve(__dirname, 'src')"
+                ],
+                "loader": "'babel-loader'"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "my-webpack-project": {
+    "configuration": {
+      "config": {
+        "configName": "config",
+        "topScope": [
+          "const path = require('path');",
+          "const webpack = require('webpack');",
+          "\n"
+        ],
+        "webpackOptions": {
+          "mode": "'development'",
+          "plugins": [
+            "new webpack.ProgressPlugin()"
+          ],
+          "module": {
+            "rules": []
+          }
+        }
+      }
+    }
   }
 }
